@@ -52,10 +52,10 @@ var App = {
   },
 };
 $(window).resize(function () {
-  App.changeFontSize();
+  // App.changeFontSize();
 });
 $(window).on("load", function () {
-  App.changeFontSize();
+  //App.changeFontSize();
 });
 App.init();
-App.changeFontSize();
+//App.changeFontSize();

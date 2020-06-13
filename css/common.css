@@ -1,10 +1,10 @@
 @charset "UTF-8";
 html,
 body {
-  font-size: 100px;
   padding: 0;
   margin: 0;
   font-family: Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  background-color: #ecf1fe;
 }
 
 div,
@@ -139,5 +139,88 @@ img {
   content: "";
   display: block;
   clear: both;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.header .top {
+  height: 183px;
+  background: url("../images/header-bg.png") no-repeat center;
+  background-size: cover;
+}
+
+.header .top .logo {
+  display: inline-block;
+  padding-top: 63px;
+  padding-left: 38px;
+}
+
+.header .top .right {
+  position: absolute;
+  top: 50px;
+  right: 0;
+}
+
+.header .top .right .home {
+  font-size: 12px;
+  font-weight: 400;
+  color: #3c3f40;
+  line-height: 17px;
+  text-align: right;
+  display: block;
+  margin-bottom: 7px;
+}
+
+.header .top .right form {
+  font-size: 0;
+}
+
+.header .top .right .searchValue {
+  background: #ecf1fe;
+  border: none;
+  height: 36px;
+  width: 209px;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  padding: 6px;
+}
+
+.header .top .right .fa-search {
+  width: 36px;
+  height: 36px;
+  background-color: #d8d8d8;
+  display: inline-block;
+  vertical-align: top;
+  background-image: url("../images/search.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.header .nav {
+  height: 48px;
+  background: #106bba;
+}
+
+.header .nav ul {
+  font-size: 0;
+}
+
+.header .nav ul > li {
+  display: inline-block;
+  text-align: center;
+  width: 150px;
+}
+
+.header .nav ul > li > a {
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  line-height: 48px;
+  letter-spacing: 2px;
 }
 /*# sourceMappingURL=common.css.map */
