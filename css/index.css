@@ -203,6 +203,10 @@
   bottom: 0;
 }
 
+.main .gzdt .gzdt-left .title:hover {
+  text-decoration: underline;
+}
+
 .main .gzdt .gzdt-left .swiper-pagination {
   top: 8px;
   bottom: inherit;
