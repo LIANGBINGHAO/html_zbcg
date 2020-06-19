@@ -127,6 +127,12 @@ img {
 * {
   box-sizing: border-box;
 }
+body {
+  min-width: 1200px;
+}
+img {
+  max-width: 100%;
+}
 
 /*公共方法*/
 .clear::after {
@@ -163,6 +169,9 @@ img {
         display: block;
         margin-bottom: 7px;
       }
+      .home:hover {
+        text-decoration: underline;
+      }
       form {
         font-size: 0;
       }
@@ -185,6 +194,7 @@ img {
         background-image: url("../images/search.png");
         background-repeat: no-repeat;
         background-position: center;
+        cursor: pointer;
       }
     }
   }
@@ -203,8 +213,48 @@ img {
           color: rgba(255, 255, 255, 1);
           line-height: 48px;
           letter-spacing: 2px;
+          position: relative;
+          display: block;
+        }
+        > a::after {
+          content: "";
+          width: 0;
+          height: 4px;
+          background: #fff;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          -webkit-transition: all 0.3s;
+          transition: all 0.3s;
         }
       }
+      > li:hover {
+        a::after {
+          width: 64px;
+        }
+      }
+    }
+  }
+}
+.footer {
+  margin-top: 16px;
+  height: 89px;
+  background: rgba(13, 90, 169, 1);
+  text-align: center;
+  div {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 17px;
+    letter-spacing: 1px;
+    padding-top: 27px;
+    a {
+      font-size: 12px;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.5);
+      line-height: 17px;
+      letter-spacing: 1px;
     }
   }
 }
