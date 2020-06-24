@@ -202,5 +202,33 @@
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/common.js"></script>
+    <script>
+    var str='"<a href="http://39.108.157.240">首页</a> &gt; <a href="http://39.108.157.240/category/xwdt/">新闻动态</a> &gt; <a href="http://39.108.157.240/category/xwdt/zhxw/">综合新闻</a> &gt; "'
+    str = str.substring(0, str.lastIndexOf('&gt;'));
+    console.log(str,'str')
+    var isClose=false;
+        //ie8
+        var DEFAULT_VERSION = 8.0;
+        var ua = navigator.userAgent.toLowerCase();
+        var isIE = ua.indexOf("msie")>-1;
+        var safariVersion;
+        if(isIE){
+            safariVersion =  ua.match(/msie ([\d.]+)/)[1];
+            if(safariVersion <= DEFAULT_VERSION ){
+                $("body").prepend("<div class='ie_low_version' ><div><span>关闭</span>本站不支持您的浏览器，360、Sogou 等浏览器请切换到急速模式，或升级您的浏览器到<a href='http://browsehappy.osfipin.com/' target='_blank' style='text-decoration:underline'>更高的版本</a>！以获得更好的观看效果。</div></div>");
+                $('.header.pcArea').css('top', '70px').addClass('ie8');
+                $('.ie_low_version span').click(function () {
+                    $('.ie_low_version').css('display','none');
+                    $('.header.pcArea').css('top', '0').removeClass('ie8');
+                    $('.ie_low_version+div').css('margin-top','0');
+                    isClose=true;
+                });
+                $('#wrapper').addClass('ie8')
+
+            }else {
+                $('#wrapper').removeClass('ie8');
+            }
+        }
+    </script>
   </body>
 </html>
